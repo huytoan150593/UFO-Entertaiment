@@ -26,7 +26,7 @@ const Navbar = () => {
     <div id="navbar">
       <div className="nav-wrapper">
         <div className="logo">
-          <img src="/assets/logo-white.png" alt="" />
+          <img src="/assets/logo3.png" alt="" />
         </div>
         <div className="nav-menu">
           <ul>
@@ -68,7 +68,10 @@ const Navbar = () => {
           the best work possible and put the workss money where it belongs, on
           the screen.
         </p>
-        <div className="main-btn">Watch video</div>
+        <div className="main-btn" onClick={console.log(123)}>
+          <img src="/assets/aLongStrek.png" alt="" />
+          <p>Watch Video</p>
+        </div>
       </div>
       {show && (
         <div className="nav-mobile">

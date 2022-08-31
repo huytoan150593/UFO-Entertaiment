@@ -12,7 +12,7 @@
     min-height: 100%;
   }
   
-  .content {
+  /* .content {
     position: absolute;
     text-align: center;
     top: 0;
@@ -37,18 +37,33 @@
     background-color: white;
     animation: light .5s 2s forwards;
     animation-timing-function: linear;
-  }
+  } */
 
-  
+  #ufo {
+    position: absolute;
+    width: 0;
+    height: fit-content;
+    top: 30%;
+    left: 40%;
+    animation: showOff 3s forwards;
+  }
+  #ufo img {
+    width: 100%;
+    height: auto;
+  }
   #myBtn {
+    position: fixed;
+    bottom: 15%;
+    opacity: 0;
     width: 200px;
     font-size: 18px;
     padding: 10px;
     border: none;
-    background: #000;
-    color: #fff;
+    background: grey;
+    color: black;
     cursor: pointer;
-    margin: auto;
+    animation: fadeIn 1s forwards 3.5s;
+    z-index: 4;
   }
   
   #myBtn:hover {
@@ -57,17 +72,9 @@
   }
 
   @keyframes showOff {
-    0%{
-      opacity: 0;
-      top: 20%;
-      font-size: 0;
-      left: 20%;
-    }
-    100%{
-      opacity: 1;
+    to{
       top: 50%;
-      font-size: 3rem;
-      left: 50%;
+      width: 200px;
     }
   }
   @keyframes light {
@@ -77,3 +84,14 @@
     }
   }
   
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes rotateUfo {
+    to {
+      transform: rotate(15deg);
+    }
+    
+  }

@@ -7,7 +7,7 @@ const MyTeam = () => {
       <div className="page-header section-dark">
         <div className="filter"></div>
         <div className="container">
-          <h2 className="presentation-subtitle text-center">Headline</h2>
+          <h2 className="presentation-subtitle text-center">Product Team</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             beatae quo iste? Saepe id voluptatum voluptatibus perspiciatis

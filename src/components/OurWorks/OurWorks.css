@@ -1,3 +1,71 @@
-#our-work {
+#our-works {
+    position: relative;
+    border-top: 2px solid var(--text-color);
+    text-align: center;
+}
+#our-works .title {
+    font-size: 24px;
+    padding: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    margin: auto;
+    background-color: var(--dark);
+    border-bottom: 2px solid var(--text-color);
+}
+.reel-container {
     background-image: url("/public/assets/wood-bg.jpg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+.product-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.pro {
+    position: relative;
+    width: 26%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid var(--low-grey);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    background-color: whitesmoke;
+}
+.pro:hover {
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    opacity: .8;
+}
+.pro img {
+    width: 100%;
+    border-radius: 5px;
+}
+.des p:first-child {
+    color: black;
+    font-family: 'Righteous', cursive;
+}
+.des p:nth-child(2) {
+    color: black;
+    font-family: 'Indie Flower', cursive;
+}
+.hidden {
+    display: none;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 4;
+}
+.iframe {
+    width: 80%;
+    max-width: 1000px;
+    height:60vh;
+    transform: translateY(30%);
+    border-radius: 20px;
 }

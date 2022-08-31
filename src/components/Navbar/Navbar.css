@@ -1,6 +1,6 @@
 #navbar {
     position: relative;
-    min-height: 520px;
+    height: 100vh;
     overflow: hidden;
 }
 #navbar:before {
@@ -21,12 +21,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: var(--opacity-bg-color);
     padding: 0 2rem;
 }
 .logo {
-    width: 100px;
+    width: 200px;
     height: auto;
+    padding: 20px 0;
 }
 .logo img {
     width: 100%;
@@ -96,33 +97,34 @@
     font-family: 'Rubik Maze', cursive;
     margin: 20px 0;
     transform: translateX(100%);
-    animation: rightToLeft 1s forwards;
+    animation: horizonMove 1s forwards;
 }
 .nav-content p {
     line-height: 1.5rem;
     transform: translateY(100%);
-    animation: bottomToTop 2s forwards;
+    animation: verticalMove 2s forwards;
     font-family: 'Permanent Marker', cursive;
     font-size: larger;
     font-weight: 700;
 }
-.nav-content .main-btn {
-    width: fit-content;
-    margin-top: 20px;
-    padding: 1rem;
-    font-size: 20px;
-    background-color: black;
-    color: white;
-    font-family: 'Rubik Maze', cursive;
-    border: 1px solid var(--text-color);
+
+.main-btn {
+    position: relative;
+    width: 250px;
+}
+.main-btn p {
+    position: absolute;
+    top: 12px;
+    left: -400px;
+    animation: moveToPaint .3s forwards 1s;
     cursor: pointer;
-    transform: translateX(-500%);
-    animation: leftToRight .5s .8s forwards;
 }
-.main-btn:hover {
-    background-color: var(--mid-grey);
-    color: black;
+.main-btn img {
+    width: 100%;
+    transform: translateX(100%);
+    animation: horizonMove .07s forwards 1.3s;
 }
+
 #mobile-menu-icons {
     display: none;
     position: relative;
@@ -161,12 +163,19 @@
         width: 85%;
         top: 20%;
     }
+    .nav-icons {
+        justify-content: space-evenly;
+    }
+    .nav-icon:nth-child(3){
+        display: none;
+    }
     .nav-mobile {
         width: 100%;
         background-color: rgba(0,0,0, 0.9);
         opacity: 0;
         transform: translateY(-100%);
-        animation: topToBottom 1s forwards;
+        animation: verticalMove 1s forwards;
+        z-index: 5;
     }
 
     .nav-mobile li {
@@ -180,24 +189,19 @@
 }
 
 /* Animation */
-@keyframes rightToLeft {
+@keyframes horizonMove {
     to {
         transform: translateX(0);
     }
 }
-@keyframes bottomToTop {
-    to {
-        transform: translateY(0);
-    }
-}
-@keyframes topToBottom {
+@keyframes verticalMove {
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
-@keyframes leftToRight {
+@keyframes moveToPaint {
     to {
-        transform: translateX(0);
+        left: 15px;
     }
 }

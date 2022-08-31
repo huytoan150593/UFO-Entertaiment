@@ -14,6 +14,7 @@
   --low-grey: rgba(109,109,109,.3);
   --mid-grey: #6d6d6d;
   --dark: #232223;
+  --opacity-bg-color: rgba(0,0,0, 0.5); 
 }
 *, html, body {
   margin: 0;
