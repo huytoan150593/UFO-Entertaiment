@@ -1,0 +1,79 @@
+#intro-video {
+  position: relative;
+  height: 100vh;
+  width: 100wh;
+  overflow: hidden;
+}
+#myVideo {
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
+  .content {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    font-size: .5rem;
+    opacity: 0;
+    color: #f1f1f1;
+    padding: 20px;
+    animation: showOff 2s forwards;
+    animation-timing-function: linear;
+  }
+  .content span {
+    position: relative;
+  }
+  .content::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 0;
+    opacity: 0;
+    left: 20%;
+    top: 80%;
+    background-color: white;
+    animation: light .5s 2s forwards;
+    animation-timing-function: linear;
+  }
+
+  
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  @keyframes showOff {
+    0%{
+      opacity: 0;
+      top: 20%;
+      font-size: 0;
+      left: 20%;
+    }
+    100%{
+      opacity: 1;
+      top: 50%;
+      font-size: 3rem;
+      left: 50%;
+    }
+  }
+  @keyframes light {
+    to {
+      height: 300px;
+      opacity: 1;
+    }
+  }
+  

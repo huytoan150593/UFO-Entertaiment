@@ -1,0 +1,203 @@
+#navbar {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+}
+#navbar:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-image: url('/public/assets/head-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.5);
+    padding: 0 2rem;
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+.logo img {
+    width: 100%;
+    height: auto;
+}
+.nav-menu {
+    flex-basis: 45%;
+    max-width: 600px;
+}
+.nav-menu ul{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 45%;
+}
+.nav-item {
+    position: relative;
+    font-size: 1rem;
+    transition: all .5 ease-in-out;
+    font-family: 'Righteous', cursive;
+}
+.nav-item::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: .5s;
+    bottom: 0;
+}
+.nav-item:hover::before {
+    width: 100%;
+}
+.nav-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.nav-icon {
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+.nav-icon:hover {
+    transform: translateY(-10px);
+    background-color: black;
+}
+.nav-content {
+    position: absolute;
+    overflow: hidden;
+    width: 40%;
+    max-width: 500px;
+    text-align: end;
+    background-color: transparent;
+    top: 30%;
+    right: 10%;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.nav-content h1 {
+    font-family: 'Rubik Maze', cursive;
+    margin: 20px 0;
+    transform: translateX(100%);
+    animation: rightToLeft 1s forwards;
+}
+.nav-content p {
+    line-height: 1.5rem;
+    transform: translateY(100%);
+    animation: bottomToTop 2s forwards;
+    font-family: 'Permanent Marker', cursive;
+    font-size: larger;
+    font-weight: 700;
+}
+.nav-content .main-btn {
+    width: fit-content;
+    margin-top: 20px;
+    padding: 1rem;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Rubik Maze', cursive;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    transform: translateX(-500%);
+    animation: leftToRight .5s .8s forwards;
+}
+.main-btn:hover {
+    background-color: var(--mid-grey);
+    color: black;
+}
+#mobile-menu-icons {
+    display: none;
+    position: relative;
+}
+
+/* Responsive */
+@media screen and (max-width: 1201px){}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 834px){
+    .nav-menu {
+        flex-basis: 60%;
+    }
+    .nav-content {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 480px){
+    .nav-menu {
+        display: none;
+    }
+    #mobile-menu-icons {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+    }
+    #tb-menu, #tb-x  {
+        position: absolute;
+        font-size: 40px;
+        background-color: transparent;
+    }
+    .hidden {
+        display: none;
+    }
+    .nav-content {
+        width: 85%;
+        top: 20%;
+    }
+    .nav-mobile {
+        width: 100%;
+        background-color: rgba(0,0,0, 0.9);
+        opacity: 0;
+        transform: translateY(-100%);
+        animation: topToBottom 1s forwards;
+    }
+
+    .nav-mobile li {
+        border-bottom: 1px solid var(--text-color);
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .nav-mobile li:first-child {
+        border-top: 1px solid var(--text-color);
+    }
+}
+
+/* Animation */
+@keyframes rightToLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes bottomToTop {
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes topToBottom {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes leftToRight {
+    to {
+        transform: translateX(0);
+    }
+}
