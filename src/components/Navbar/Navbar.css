@@ -3,6 +3,9 @@
     height: 100vh;
     overflow: hidden;
 }
+.hidden {
+    display: none;
+}
 #navbar:before {
     content: '';
     display: block;
@@ -135,15 +138,11 @@
 @media screen and (max-width: 1024px){}
 @media screen and (max-width: 834px){
     .nav-menu {
-        flex-basis: 60%;
-    }
-    .nav-content {
-        width: 50%;
-    }
-}
-@media screen and (max-width: 480px){
-    .nav-menu {
         display: none;
+    }
+    .nav-icons {
+        justify-content: space-evenly;
+        flex-basis: 40%;
     }
     #mobile-menu-icons {
         display: block;
@@ -156,9 +155,11 @@
         font-size: 40px;
         background-color: transparent;
     }
-    .hidden {
-        display: none;
+    .nav-content {
+        width: 50%;
     }
+}
+@media screen and (max-width: 480px){
     .nav-content {
         width: 85%;
         top: 20%;
