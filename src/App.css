@@ -8,7 +8,9 @@
 
     font-family: 'Rubik Maze', cursive;
 
-    font-family: 'Sofia', cursive; */
+    font-family: 'Sofia', cursive;
+
+    font-family: 'Pacifico', cursive; */
 :root {
   --text-color: white;
   --low-grey: rgba(109,109,109,.3);
@@ -32,3 +34,8 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 1201px){}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 834px){}
+@media screen and (max-width: 480px){}

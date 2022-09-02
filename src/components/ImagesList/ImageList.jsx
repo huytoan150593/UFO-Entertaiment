@@ -1,8 +1,12 @@
 import React from "react";
-import "./ImageList.css";
+import "./ImagesList.css";
 
 const ImageList = () => {
-  return <div>ImageList</div>;
+  return (
+    <div>
+      <div id="container"></div>
+    </div>
+  );
 };
 
 export default ImageList;

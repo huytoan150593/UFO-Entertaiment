@@ -3,6 +3,7 @@
     margin: 0;
     overflow: hidden;
 }
+
 #image-list canvas {
     position: absolute;
     backface-visibility: hidden;
@@ -13,13 +14,14 @@
 
 #image-list img {
     position: absolute;
-    cursor: pointer;
+    -webkit-transition:opacity .3s;
+    transition:opacity .3s;
 }
 
 #container {
     position: absolute;
     width: 768px;
-    height: 485px;
+    height: 432px;
     left: 0;
     right: 0;
     top: 0;

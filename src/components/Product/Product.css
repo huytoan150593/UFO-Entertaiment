@@ -1,0 +1,101 @@
+.our-works-content {
+    background-image: url("/public/assets/wood-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro-thumb {
+    width: 0;
+    border: 2px solid var(--dark);
+    border-radius: 10px;
+    background-color: var(--mid-grey);
+    cursor: pointer;
+    transform: rotateZ(2deg);
+    animation: flyOut .5s forwards;
+}
+.pro-thumb img {
+    width: 100%;
+}
+
+.pro-detail {
+    text-align: start;
+    line-height: 2.5rem;
+    margin-left: 30px;
+    overflow: hidden;
+}
+.pro-detail h1, .pro-detail p, .pro-detail strong{
+    color: black;
+    transform: translateX(300%);
+    font-family: 'Pacifico', cursive;
+}
+.pro-detail h1 {
+    font-family: 'Permanent Marker', cursive;
+    animation: horizonMove .3s forwards .2s;
+}
+.pro-detail p {
+    font-size: 20px;
+}
+.pro-detail p:nth-child(2) {
+    margin-top: 20px;
+    animation: horizonMove .3s forwards .5s;
+}
+.pro-detail p:nth-child(3) {
+    animation: horizonMove .3s forwards .6s;
+}
+.pro-detail p:nth-child(4) {
+    animation: horizonMove .3s forwards .7s;
+}
+
+.pro-detail p:nth-child(5) {
+    margin-bottom: 20px;
+    animation: horizonMove .3s forwards .8s;
+}
+.watch-btn {
+    background-image: url("/public/assets/aLongStrek.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Permanent Marker', cursive;
+    width: 150px;
+    opacity: 0;
+    transform: translateY(-300%);
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    animation: verticalMove 1s forwards .8s;
+}
+.watch-btn:hover{
+    width: 200px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1201px){}
+@media screen and (max-width: 1024px){}
+@media screen and (max-width: 834px){
+    .our-works-content {
+        flex-basis: 100%;
+        padding: 3rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .our-works-content {
+        padding: 20px 0;
+    }
+    .pro-thumb {
+        margin-bottom: 20px;
+    }
+    .pro-detail h1 {
+        font-size: 25px;
+    }
+    .pro-detail p:nth-child(2) {
+        margin-top: 0px;
+    }
+    .pro-detail {
+        margin-left: 0;
+    }
+}

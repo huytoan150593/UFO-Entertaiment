@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { musicVideo } from "../../constains/data";
+import Product from "../Product/Product";
 import "./OurWorks.css";
+
 const OurWorks = () => {
-  const [url, setUrl] = useState("https://www.youtube.com/embed/DuFHaVJpcr4");
+  const [url, setUrl] = useState("https://www.youtube.com/embed/tgbNymZ7vqY");
+  const [video, setVideo] = useState(musicVideo[0]);
   const handleOverlay = () => {
     const iframe = document.querySelector("iframe");
     var iframeSrc = iframe.src;
@@ -14,6 +17,17 @@ const OurWorks = () => {
     myCheck.checked = true;
     const newUrl = musicVideo.find((item) => item.id === id).url;
     setUrl(newUrl);
+  };
+  const handleHover = (e) => {
+    const id = Number(e.target.dataset.idx);
+    const newVideo = musicVideo.find((item) => item.id === id);
+    setVideo(newVideo);
+  };
+
+  const handleSelect = (e) => {
+    const id = Number(e.target.innerText);
+    const newVideo = musicVideo.find((item) => item.id === id);
+    setVideo(newVideo);
   };
   return (
     <div id="our-works">
@@ -31,31 +45,29 @@ const OurWorks = () => {
         allow="accelerometer"
         allowFullScreen
       ></iframe>
-      <div className="title">Our Works</div>
       <div className="reel-container">
-        <div className="slogan">
-          Coined by one of the company’s advertising agencies back in 1988, this
-          slogan is extremely action-oriented and does a great job of
-          communicating one of the core messages of Nike’s brand—to give people
-          the tools to be active and perform better.
+        <div className="our-works-title">
+          <p>Our Project</p>
+          <ul>
+            {musicVideo.map((video) => (
+              <li
+                key={video.id}
+                data-idx={video.id}
+                onMouseOver={(e) => handleHover(e)}
+              >
+                {video.name}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="product-card">
-          {musicVideo.map((item) => {
-            return (
-              <div key={item.id} data-index={item.id} className="pro">
-                <img src={item.thumbnail} alt="" />
-                <div className="des">
-                  <p>{item.name}</p>
-                  <p>{item.description}</p>
-                  <p data-idx={item.id} onClick={(e) => handlePlay(e)}>
-                    Watch video
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+        <Product key={video.id} handlePlay={handlePlay} video={video} />
+        <div className="small-list">
+          {musicVideo.map((video) => (
+            <div key={video.id} onClick={(e) => handleSelect(e)}>
+              {video.id}
+            </div>
+          ))}
         </div>
-        <div className="showWorks-btn">See More</div>
       </div>
     </div>
   );

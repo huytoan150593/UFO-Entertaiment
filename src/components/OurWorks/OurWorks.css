@@ -3,79 +3,44 @@
     border-top: 2px solid var(--text-color);
     text-align: center;
 }
-#our-works .title {
-    font-size: 24px;
-    padding: 2rem;
-    font-family: 'Permanent Marker', cursive;
-    margin: auto;
-    background-color: var(--dark);
-    border-bottom: 2px solid var(--text-color);
-}
+
 .reel-container {
-    background-image: url("/public/assets/dark-bg2.jpg");
-    background-repeat: none;
-    background-position: center;
-    background-size: cover;
-    padding: 30px 0;
-}
-.slogan {
-    max-width: 700px;
-    font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 3rem;
-    margin: auto;
-}
-.product-card {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
     margin: auto;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
-.pro {
-    position: relative;
-    width: 26%;
-    min-width: 250px;
-    padding: 10px 12px;
-    border: 2px solid var(--text-color);
-    border-radius: 5px;
+
+.small-list {
+    display: none;
+}
+.our-works-title {
+    background-image: url("http://www.ivang-design.com/svg-load/3.jpg");
+    flex-basis: 50%;
+    background-color: aqua;
+}
+.our-works-title p {
+    padding: 30px 0;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+.our-works-title ul li{
+    padding: 0;
+	font-size: 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	line-height: 1.3;
+	letter-spacing: 2px;
+	color: #8e8d9a;
+    -webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
     cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
-    margin: 15px;
-    transition: 0.2s ease;
-    background-color: var(--mid-grey);
 }
-.pro:hover {
-    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
-    opacity: .8;
+.our-works-title ul li:hover {
+    color: white;
 }
-.pro img {
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid var(--text-color);
-}
-
-.des p:first-child {
-    color: black;
-    font-family: 'Bree Serif', serif;
-    margin: 20px auto;
-}
-.des p:nth-child(2) {
-    color: black;
-    font-family: 'Indie Flower', cursive;
-    margin-bottom: 60px;
-}
-.des p:nth-child(3) {
-    position: absolute;
-    background-color: black;
-    padding: .7rem;
-    border-radius: 10px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .overlay {
     position: fixed;
     top: 0;
@@ -106,17 +71,7 @@
     display: none;
     border: 4px solid var(--text-color);
 }
-.showWorks-btn {
-    width: 200px;
-    padding: 1rem;
-    border: 2px solid var(--text-color);
-    border-radius: 10px;
-    margin: auto;
-}
 
-.showWorks-btn:hover {
-    background-color: black;
-}
 
 /* Responsive */
 @media screen and (min-width: 1201px){}
@@ -129,9 +84,36 @@
     .iframe {
         height: 45%;
     }
+    .our-works-title {
+        flex-basis: 100%;
+    }
 }
 @media screen and (max-width: 480px){
     .iframe {
         height: 32%;
+    }
+    .our-works-title {
+        display: none;
+    }
+    .small-list {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .small-list div {
+        background-color: black;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        line-height: 40px;
+    }
+}
+
+@keyframes flyOut {
+    to {
+        width: 300px;
+        rotate: 6.2832rad;
     }
 }
