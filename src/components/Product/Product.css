@@ -97,5 +97,6 @@
     }
     .pro-detail {
         margin-left: 0;
+        max-width: 300px;
     }
 }

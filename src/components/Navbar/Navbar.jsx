@@ -15,6 +15,32 @@ const Navbar = () => {
     fontSize: "30px",
     backgroundColor: "transparent",
   };
+  const showMainVideo = () => {
+    const video = document.getElementById("main-video");
+    const mainBtnText = document.querySelector(".main-btn > span");
+    const mainBtn = document.querySelector(".main-btn");
+    const navContentTitle = document.querySelector(".nav-content > h1");
+    const navContentDetail = document.querySelector(".nav-content > p");
+    const isCheck = video.classList.contains("hidden");
+    if (isCheck) {
+      video.classList.remove("hidden");
+      navContentTitle.classList.add("hidden");
+      navContentDetail.classList.add("hidden");
+      mainBtnText.textContent = "Stop <---";
+      if (window.innerWidth <= 480) {
+        mainBtn.classList.add("small-style-btn");
+      } else {
+      }
+      video.play();
+    } else {
+      video.classList.add("hidden");
+      navContentTitle.classList.remove("hidden");
+      navContentDetail.classList.remove("hidden");
+      mainBtnText.textContent = "Watch Video";
+      mainBtn.classList.remove("small-style-btn");
+      video.pause();
+    }
+  };
   const handleShowMenu = () => {
     const tbMenu = document.getElementById("tb-menu");
     const tbX = document.getElementById("tb-x");
@@ -60,6 +86,12 @@ const Navbar = () => {
           <TbX id="tb-menu" className="hidden" />
         </div>
       </div>
+      <video
+        id="main-video"
+        className="hidden"
+        src="/assets/main-video.mp4"
+        controls
+      ></video>
       <div className="nav-content">
         <h1>UFO Entertaiment</h1>
         <p>
@@ -68,9 +100,8 @@ const Navbar = () => {
           the best work possible and put the workss money where it belongs, on
           the screen.
         </p>
-        <div className="main-btn" onClick={console.log(123)}>
-          <img src="/assets/aLongStrek.png" alt="" />
-          <p>Watch Video</p>
+        <div className="main-btn" onClick={showMainVideo}>
+          <span>Watch Video</span>
         </div>
       </div>
       {show && (
@@ -79,25 +110,29 @@ const Navbar = () => {
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#our-works">Our works</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#product-team">Product Team</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#features">Features</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#contact">Contact</a>
             </li>
           </ul>
