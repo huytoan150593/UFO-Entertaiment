@@ -10,22 +10,31 @@
 
     font-family: 'Sofia', cursive;
 
-    font-family: 'Pacifico', cursive; */
+    font-family: 'Pacifico', cursive; 
+    font-family: 'Itim', cursive;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Sriracha', cursive;
+    font-family: 'Sigmar One', cursive;*/
 :root {
   --text-color: white;
-  --low-grey: rgba(109,109,109,.3);
+  --low-grey: rgba(109, 109, 109, 0.3);
   --mid-grey: #6d6d6d;
   --dark: #232223;
-  --opacity-bg-color: rgba(0,0,0, 0.5); 
+  --opacity-bg-color: rgba(0, 0, 0, 0.5);
 }
-*, html, body {
+*,
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--text-color);
   scroll-behavior: smooth;
 }
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -35,7 +44,11 @@ ul {
   padding: 0;
 }
 
-@media screen and (max-width: 1201px){}
-@media screen and (max-width: 1024px){}
-@media screen and (max-width: 834px){}
-@media screen and (max-width: 480px){}
+@media screen and (max-width: 1201px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 834px) {
+}
+@media screen and (max-width: 480px) {
+}

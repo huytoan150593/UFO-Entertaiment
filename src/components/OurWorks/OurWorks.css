@@ -1,7 +1,18 @@
 #our-works {
     position: relative;
-    border-top: 2px solid var(--text-color);
     text-align: center;
+    background-color: rgba(0,0,0,.5);
+}
+#our-works::after {
+    position: absolute;
+    content: "";
+    background-image: url("/public/assets/inside-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .8;
+    inset: 0;
+    z-index: -1;
 }
 
 .reel-container {
@@ -14,31 +25,46 @@
     display: none;
 }
 .our-works-title {
-    background-image: url("http://www.ivang-design.com/svg-load/3.jpg");
-    flex-basis: 50%;
+    flex-basis: 40%;
 }
 .our-works-title p {
+    position: relative;
     padding: 30px 0;
     font-size: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Itim', cursive;
     font-weight: 600;
 }
+.our-works-title p::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-color);
+}
+.our-works-title ul {
+    width: fit-content;
+    margin: auto;
+}
+
 .our-works-title ul li{
     padding: 0;
 	font-size: 20px;
 	margin-top: 25px;
 	margin-bottom: 25px;
-	font-family: 'Poppins', sans-serif;
+    font-family: 'Pangolin', cursive;
 	font-weight: 500;
 	line-height: 1.3;
+    color: white;
 	letter-spacing: 2px;
-	color: #8e8d9a;
     -webkit-transition: all 300ms linear;
 	transition: all 300ms linear; 
     cursor: pointer;
+    border-radius: 10px;
 }
 .our-works-title ul li:hover {
-    color: white;
+    background-color: black;
 }
 .overlay {
     position: fixed;
@@ -77,6 +103,9 @@
 @media screen and (max-width: 1024px){
     .iframe {
         height: 50%;
+    }
+    .our-works-title {
+        flex-basis: 35%;
     }
 }
 @media screen and (max-width: 834px){

@@ -1,125 +1,99 @@
 #intro-video {
   position: relative;
+  width: 100%;
   height: 100vh;
-  width: 100wh;
+  object-fit: cover;
   overflow: hidden;
 }
 #myVideo {
-    position: absolute;
-    width: auto;
-    height: auto;
-    min-width: 100%; 
-    min-height: 100%;
-  }
-  
-  /* .content {
-    position: absolute;
-    text-align: center;
-    top: 0;
-    font-size: .5rem;
-    opacity: 0;
-    color: #f1f1f1;
-    padding: 20px;
-    animation: showOff 2s forwards;
-    animation-timing-function: linear;
-  }
-  .content span {
-    position: relative;
-  }
-  .content::after {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 0;
-    opacity: 0;
-    left: 20%;
-    top: 80%;
-    background-color: white;
-    animation: light .5s 2s forwards;
-    animation-timing-function: linear;
-  } */
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
-  #ufo {
-    position: absolute;
-    width: 0;
-    height: fit-content;
+#ufo {
+  position: absolute;
+  width: 0;
+  height: fit-content;
+  top: 30%;
+  left: 30%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: showOff 2s forwards, loopMove 5s infinite 2s;
+  animation-timing-function: linear;
+}
+#ufo img {
+  width: 100%;
+  height: auto;
+}
+#intro-btn {
+  position: fixed;
+  text-align: center;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  width: 150px;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  animation: fadeIn 1s forwards 3.5s;
+  z-index: 4;
+}
+
+#intro-btn:hover {
+  background: #ddd;
+  color: black;
+}
+
+@keyframes showOff {
+  from {
     top: 30%;
     left: 30%;
-    animation: showOff 2s forwards, loopMove 5s infinite 2s;
-    animation-timing-function: linear;
   }
-  #ufo img {
-    width: 100%;
-    height: auto;
-  }
-  #intro-btn {
-    position: fixed;
-    text-align: center;
-    bottom: 15%;
+  to {
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    width: 150px;
-    font-size: 18px;
-    padding: 10px;
-    border: 2px solid var(--text-color);
-    border-radius: 10px;
-    background: transparent;
-    color: var(--text-color);
-    cursor: pointer;
-    animation: fadeIn 1s forwards 3.5s;
-    z-index: 4;
+    rotate: 15deg;
+    width: 200px;
   }
-  
-  #intro-btn:hover {
-    background: #ddd;
-    color: black;
+}
+@keyframes light {
+  to {
+    height: 300px;
+    opacity: 1;
   }
+}
 
-  @keyframes showOff {
-    to{
-      top: 50%;
-      left: 45%;
-      width: 200px;
-      transform: rotateZ(15deg);
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  @keyframes light {
-    to {
-      height: 300px;
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes rotateUfo {
-    to {
-      transform: rotate(15deg);
-    }
-    
-  }
+}
 
-  @keyframes loopMove {
-    0% {
-      transform: translateY(0) translateX(0) rotate(15deg); 
-    }
-    20% {
-      transform: translateY(-8%) translateX(-8%) rotate(15deg);
-    }
-    40% {
-      transform: translateY(8%) translateX(0) rotate(15deg);
-    }
-    60% {
-      transform: translateY(-8%) translateX(0) rotate(15deg);
-    }
-    80% {
-      transform: translateY(8%) translateX(8%) rotate(15deg);
-    }
-    100% {
-      transform: translateY(0) translateX(0) rotate(15deg);
-    }
+@keyframes loopMove {
+  0% {
+    transform: translateY(-50%) translateX(-50%);
   }
+  20% {
+    transform: translateY(-58%) translateX(-42%);
+  }
+  40% {
+    transform: translateY(-42%) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-58%) translateX(-50%);
+  }
+  80% {
+    transform: translateY(-42%) translateX(-42%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-50%);
+  }
+}

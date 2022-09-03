@@ -1,0 +1,146 @@
+#producer {
+  position: relative;
+  font-size: 12px;
+}
+.fog-low {
+  margin-bottom: -35px;
+}
+.wrapper {
+  -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  left: 0;
+  background-color: white;
+}
+.page-header {
+  background-image: url("/public/assets/film-bg-filter.png");
+  background-color: #b2afab;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-header .filter::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  height: fit-content;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.fog-low {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: -35%;
+  margin-bottom: -50px;
+  width: 110%;
+  opacity: 0.85;
+}
+.fog-low img {
+  width: 100%;
+}
+.fog-low.right {
+  margin-left: 30%;
+  opacity: 1;
+}
+.moving-clouds {
+  position: absolute;
+  background-image: url("http://demos.creative-tim.com/paper-kit-2/assets/img/clouds.png");
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 250.625em;
+  height: 100%;
+  -webkit-animation: cloudLoop 80s linear infinite;
+  animation: cloudLoop 80s linear infinite;
+}
+
+.myTeam-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 30px 0;
+}
+#producer-img {
+  width: 40%;
+  min-width: 280px;
+  border: 1px solid white;
+}
+#producer-img img{
+  width: 100%;
+}
+.producer-detail {
+  width: 40%;
+  
+}
+.producer-detail h1 {
+  line-height: 3rem;
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  font-family: 'Pangolin', cursive;
+}
+.producer-detail p {
+  padding: 20px;
+  font-size: 20px;
+  line-height: 2rem;
+  color: white;
+  font-family: 'Itim', cursive;
+}
+
+@media screen and (max-width: 1201px) {
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 834px) {
+  #producer-img {
+    width: 30%;
+    margin-left: 20px;
+  }
+  .producer-detail {
+    flex-grow: 1;
+  }
+  .producer-detail p {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .myTeam-container {
+    margin: auto;
+  }
+  #producer-img {
+    margin-left: 0;
+  }
+  .producer-detail p {
+    line-height: 2rem;
+  }
+}
+
+@keyframes cloudLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}

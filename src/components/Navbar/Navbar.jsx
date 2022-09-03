@@ -60,10 +60,10 @@ const Navbar = () => {
               <a href="#our-works">Our works</a>
             </li>
             <li className="nav-item">
-              <a href="#production-team">Production Team</a>
+              <a href="#producer">Producer</a>
             </li>
             <li className="nav-item">
-              <a href="#features">Features</a>
+              <a href="#create-team">Create Team</a>
             </li>
             <li className="nav-item">
               <a href="#contact">Contact</a>
@@ -119,14 +119,14 @@ const Navbar = () => {
                 document.getElementById("mobile-menu-icons").click()
               }
             >
-              <a href="#product-team">Product Team</a>
+              <a href="#producer">Producer</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
               }
             >
-              <a href="#features">Features</a>
+              <a href="#create-team">Create Team</a>
             </li>
             <li
               onClick={() =>

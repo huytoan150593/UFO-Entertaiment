@@ -1,9 +1,5 @@
 .our-works-content {
-    background-image: url("/public/assets/wood-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-basis: 50%;
+    flex-basis: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,7 +8,8 @@
 
 .pro-thumb {
     width: 0;
-    border: 2px solid var(--dark);
+    margin: 40px 0;
+    border: 2px solid var(--text-color);
     border-radius: 10px;
     background-color: var(--mid-grey);
     cursor: pointer;
@@ -30,13 +27,13 @@
     overflow: hidden;
 }
 .pro-detail h1, .pro-detail p, .pro-detail strong{
-    color: black;
     transform: translateX(300%);
-    font-family: 'Pacifico', cursive;
+    font-family: 'Itim', cursive;
 }
 .pro-detail h1 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Pangolin', cursive;
     animation: horizonMove .3s forwards .2s;
+    max-width: 320px;
 }
 .pro-detail p {
     font-size: 20px;
@@ -76,12 +73,18 @@
 }
 
 @media screen and (max-width: 1201px){}
-@media screen and (max-width: 1024px){}
+@media screen and (max-width: 1024px){
+    .our-works-content {
+        flex-basis: 65%;
+    }
+}
 @media screen and (max-width: 834px){
     .our-works-content {
         flex-basis: 100%;
         padding: 3rem;
+        background-color: rgba(0,0,0,.5);
     }
+
 }
 @media screen and (max-width: 480px){
     .our-works-content {
@@ -89,6 +92,11 @@
     }
     .pro-thumb {
         margin-bottom: 20px;
+    }
+    .pro-detail {
+        border-radius: 10px;
+        background-color: rgba(0,0,0,.5);
+        padding: 20px;
     }
     .pro-detail h1 {
         font-size: 25px;
