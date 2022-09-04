@@ -109,3 +109,9 @@
         max-width: 300px;
     }
 }
+@keyframes flyOut {
+    to {
+        width: 300px;
+        transform: rotate(6.2832rad);
+    }
+}

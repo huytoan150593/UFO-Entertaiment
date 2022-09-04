@@ -1,4 +1,5 @@
 import React from "react";
+import CreateTeam from "../../components/CreateTeam/CreateTeam";
 import Footer from "../../components/Footer/Footer";
 import Form from "../../components/Form/Form";
 import Navbar from "../../components/Navbar/Navbar";
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <Producer />
       <OurWorks />
+      <CreateTeam />
       <Form />
       <Footer />
     </div>

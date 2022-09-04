@@ -138,10 +138,3 @@
         line-height: 40px;
     }
 }
-
-@keyframes flyOut {
-    to {
-        width: 300px;
-        rotate: 6.2832rad;
-    }
-}

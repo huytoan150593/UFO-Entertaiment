@@ -6,7 +6,6 @@ export const musicVideo = [
         type: "Cover",
         singer: "Mr B",
         thumbnail: "/assets/Thumbnail/1.jpg",
-        description: "I think having these div's set to inline might be causing any undesired behavior."
     },
     {
         id: 2,
@@ -15,7 +14,6 @@ export const musicVideo = [
         type: "Offical Music Video",
         singer: "Gusty",
         thumbnail: "/assets/Thumbnail/2.jpg",
-        description: "I think having these div's set to inline might be causing any undesired behavior."
     },
     {
         id: 3,
@@ -24,7 +22,6 @@ export const musicVideo = [
         type: "Music Video",
         singer: "Lien Binh Phat",
         thumbnail: "/assets/Thumbnail/3.jpg",
-        description: "I think having these div's set to inline might be causing any undesired behavior."
     },
     {
         id: 4,
@@ -33,7 +30,6 @@ export const musicVideo = [
         type: "Cover",
         singer: "Mr B",
         thumbnail: "/assets/Thumbnail/4.jpg",
-        description: "I think having these div's set to inline might be causing any undesired behavior."
     },
     {
         id: 5,
@@ -42,7 +38,6 @@ export const musicVideo = [
         type: "Cover",
         singer: "Mr B",
         thumbnail: "/assets/Thumbnail/5.jpeg",
-        description: "I think having these div's set to inline might be causing any undesired behavior."
     },
     {
         id: 6,
@@ -50,7 +45,6 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/9EziZMELz_k",
         type: "Cover",
         singer: "Mr B",
-        thumbnail: "/assets/Thumbnail/6.jpg",
-        description: "I think having these div's set to inline might be causing any undesired behavior."    
+        thumbnail: "/assets/Thumbnail/6.jpg",    
     },
 ]
