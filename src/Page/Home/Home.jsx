@@ -3,15 +3,15 @@ import CreateTeam from "../../components/CreateTeam/CreateTeam";
 import Footer from "../../components/Footer/Footer";
 import Form from "../../components/Form/Form";
 import Navbar from "../../components/Navbar/Navbar";
-import OurWorks from "../../components/OurWorks/OurWork";
 import Producer from "../../components/Producer/Producer";
+import Projects from "../../components/Projects/Projects";
 
 const Home = () => {
   return (
     <div id="home">
       <Navbar />
       <Producer />
-      <OurWorks />
+      <Projects />
       <CreateTeam />
       <Form />
       <Footer />

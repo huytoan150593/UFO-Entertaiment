@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { musicVideo } from "../../constains/data";
+// import { project } from "../../constains/data";
 import Product from "../Product/Product";
 import "./OurWorks.css";
 
-const OurWorks = () => {
+const OurWorks = ({ project, title }) => {
   const [url, setUrl] = useState("https://www.youtube.com/embed/tgbNymZ7vqY");
-  const [video, setVideo] = useState(musicVideo[0]);
+  const [video, setVideo] = useState(project[0]);
   const handleOverlay = () => {
     const iframe = document.querySelector("iframe");
     var iframeSrc = iframe.src;
@@ -15,18 +15,18 @@ const OurWorks = () => {
     const id = Number(e.target.dataset.idx);
     const myCheck = document.getElementById("my-check");
     myCheck.checked = true;
-    const newUrl = musicVideo.find((item) => item.id === id).url;
+    const newUrl = project.find((item) => item.id === id).url;
     setUrl(newUrl);
   };
   const handleHover = (e) => {
     const id = Number(e.target.dataset.idx);
-    const newVideo = musicVideo.find((item) => item.id === id);
+    const newVideo = project.find((item) => item.id === id);
     setVideo(newVideo);
   };
 
   const handleSelect = (e) => {
     const id = Number(e.target.innerText);
-    const newVideo = musicVideo.find((item) => item.id === id);
+    const newVideo = project.find((item) => item.id === id);
     setVideo(newVideo);
   };
   return (
@@ -47,9 +47,9 @@ const OurWorks = () => {
       ></iframe>
       <div className="reel-container">
         <div className="our-works-title">
-          <p>Our Project</p>
+          <p>{title}</p>
           <ul>
-            {musicVideo.map((video) => (
+            {project.map((video) => (
               <li
                 key={video.id}
                 data-idx={video.id}
@@ -62,7 +62,7 @@ const OurWorks = () => {
         </div>
         <Product key={video.id} handlePlay={handlePlay} video={video} />
         <div className="small-list">
-          {musicVideo.map((video) => (
+          {project.map((video) => (
             <div key={video.id} onClick={(e) => handleSelect(e)}>
               {video.id}
             </div>

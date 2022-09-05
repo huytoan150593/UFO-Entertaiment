@@ -1,0 +1,3 @@
+#projects .reel-container:nth-child(2n) {
+    flex-direction: row-reverse;
+}
