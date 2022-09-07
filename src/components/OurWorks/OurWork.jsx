@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Product from "../Product/Product";
 import "./OurWorks.css";
 
-const OurWorks = ({ project, title }) => {
+const OurWorks = ({ project, title, reverse }) => {
   const [url, setUrl] = useState("https://www.youtube.com/embed/tgbNymZ7vqY");
   const [video, setVideo] = useState(project[0]);
   const handleOverlay = () => {
@@ -45,7 +45,7 @@ const OurWorks = ({ project, title }) => {
         allow="accelerometer"
         allowFullScreen
       ></iframe>
-      <div className="reel-container">
+      <div className={`reel-container ${reverse}`}>
         <div className="our-works-title">
           <p>{title}</p>
           <ul>

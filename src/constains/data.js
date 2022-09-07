@@ -5,7 +5,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/Yp4kzdbNuIE",
         type: "Cover",
         singer: "Mr B",
-        thumbnail: "/assets/Thumbnail/1.jpg",
+        thumbnail: "/assets/Thumbnail/Music Video/1.jpg",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/qFFUSveH7VE",
         type: "Offical Music Video",
         singer: "Gusty",
-        thumbnail: "/assets/Thumbnail/2.jpg",
+        thumbnail: "/assets/Thumbnail/Music Video/2.jpg",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/fTgsJM_4GjA",
         type: "Music Video",
         singer: "Lien Binh Phat",
-        thumbnail: "/assets/Thumbnail/3.jpg",
+        thumbnail: "/assets/Thumbnail/Music Video/3.jpg",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/foc5tYsyaXU",
         type: "Cover",
         singer: "Mr B",
-        thumbnail: "/assets/Thumbnail/4.jpg",
+        thumbnail: "/assets/Thumbnail/Music Video/4.jpg",
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/qfdxApg0Z_o",
         type: "Cover",
         singer: "Mr B",
-        thumbnail: "/assets/Thumbnail/5.jpeg",
+        thumbnail: "/assets/Thumbnail/Music Video/5.jpeg",
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/9EziZMELz_k",
         type: "Cover",
         singer: "Mr B",
-        thumbnail: "/assets/Thumbnail/6.jpg",    
+        thumbnail: "/assets/Thumbnail/Music Video/6.jpg",    
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/9EziZMELz_k",
         type: "Ballad Version",
         singer: "Yen Tattoo",
-        thumbnail: "/assets/Thumbnail/7.jpg",    
+        thumbnail: "/assets/Thumbnail/Music Video/7.jpg",    
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ export const musicVideo = [
         url: "https://www.youtube.com/embed/9EziZMELz_k",
         type: "Cover",
         singer: "Mr B",
-        thumbnail: "/assets/Thumbnail/8.jpg",    
+        thumbnail: "/assets/Thumbnail/Music Video/8.jpg",    
     },
 ]
 
@@ -72,41 +72,41 @@ export const tvc = [
         url: "https://www.youtube.com/embed/9EziZMELz_k",
         type: "Promote",
         singer: "Trang",
-        thumbnail: "/assets/Thumbnail/tvc.png"
+        thumbnail: "/assets/Thumbnail/TVC/YZone.png"
     }
 ]
 
 export const viralVideo = [
     {
         id: 1,
-        name: "Nest Cafe",
+        name: "Aquadou 2",
         url: "https://www.youtube.com/embed/tgbNymZ7vqY",
         type: "promotion",
-        singer: "Lien Binh Phat",
-        thumbnail: "/assets/Thumbnail/vr1.png"
+        singer: "Vu Thanh Luan",
+        thumbnail: "/assets/Thumbnail/Viral/Aquadou 2.png"
     },
     {
         id: 2,
-        name: "Nest Cafe",
+        name: "Aquaduo",
         url: "https://www.youtube.com/embed/tgbNymZ7vqY",
         type: "promotion",
-        singer: "Lien Binh Phat",
-        thumbnail: "/assets/Thumbnail/vr2.png"
+        singer: "Unknown",
+        thumbnail: "/assets/Thumbnail/Viral/Aquadou.png"
     },
     {
         id: 3,
         name: "Nest Cafe",
         url: "https://www.youtube.com/embed/tgbNymZ7vqY",
         type: "promotion",
-        singer: "Lien Binh Phat",
-        thumbnail: "/assets/Thumbnail/vr3.jpg"
+        singer: "Liên Bỉnh Phát",
+        thumbnail: "/assets/Thumbnail/Viral/Mr Lien Binh Phat_Nescafe_6September.jpg"
     },
     {
         id: 4,
-        name: "Nest Cafe",
+        name: "Senka",
         url: "https://www.youtube.com/embed/tgbNymZ7vqY",
         type: "promotion",
-        singer: "Lien Binh Phat",
-        thumbnail: "/assets/Thumbnail/vr4.png"
+        singer: "Quân AP",
+        thumbnail: "/assets/Thumbnail/Viral/SenKa_Quân AP.png"
     },
 ]

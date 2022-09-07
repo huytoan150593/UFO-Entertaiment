@@ -9,7 +9,7 @@ const CreateTeam = () => {
           <img src="/assets/talent/hao-sq.jpg" alt="" />
         </div>
         <div className="talent-info">
-          <h1>Hoang Gia Hao</h1>
+          <h1>Hoàng Gia Hào</h1>
           <p>Birthday: 17/05/1996</p>
           <p>Position: Creater</p>
           <p>

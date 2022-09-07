@@ -9,7 +9,6 @@
 .pro-thumb {
     width: 0;
     margin: 40px 0;
-    border: 2px solid var(--text-color);
     border-radius: 10px;
     background-color: var(--mid-grey);
     cursor: pointer;
@@ -18,6 +17,8 @@
 }
 .pro-thumb img {
     width: 100%;
+    border: 2px solid var(--text-color);
+
 }
 
 .pro-detail {

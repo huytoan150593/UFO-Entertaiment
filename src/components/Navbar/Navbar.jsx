@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="nav-menu">
           <ul>
             <li className="nav-item">
-              <a href="#our-works">Our works</a>
+              <a href="#projects">Projects</a>
             </li>
             <li className="nav-item">
               <a href="#producer">Producer</a>
@@ -90,7 +90,8 @@ const Navbar = () => {
         id="main-video"
         className="hidden"
         src="/assets/main-video.mp4"
-        controls></video>
+        controls
+      ></video>
       <div className="nav-content">
         <h1>UFO Entertaiment</h1>
         <p>
@@ -109,25 +110,29 @@ const Navbar = () => {
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
-              <a href="#our-works">Our works</a>
+              }
+            >
+              <a href="#projects">Our works</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#producer">Producer</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#create-team">Create Team</a>
             </li>
             <li
               onClick={() =>
                 document.getElementById("mobile-menu-icons").click()
-              }>
+              }
+            >
               <a href="#contact">Contact</a>
             </li>
           </ul>

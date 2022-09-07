@@ -1,3 +1,16 @@
-#projects .reel-container:nth-child(2n) {
-    flex-direction: row-reverse;
+#projects {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+}
+#projects::after {
+    position: absolute;
+    content: "";
+    background-image: url("/public/assets/inside-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .8;
+    inset: 0;
+    z-index: -1;
 }
