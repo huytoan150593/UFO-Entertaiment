@@ -1,0 +1,36 @@
+#create-team {
+    margin: 0;
+    padding: 0;
+}
+.talent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    justify-content: space-evenly;
+}
+.talent::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .7;
+    background-image: url("/public/assets/talent/hao-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.talent-image {
+    position: relative;
+    flex-basis: 30%;
+    max-width: 600px;
+    min-width: 300px;
+    border: 1px solid black;
+}
+.talent-image img {
+    width: 100%;
+}
+.talent-info {
+    flex-basis: 60%;
+    min-width: 300px;
+}
