@@ -1,9 +1,27 @@
 #create-team {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+.create-team-navi {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.create-team-navi button {
+    padding: .8rem;
+    font-size: 40px;
+    background-color: rgba(0,0,0,.5);
+}
+.talen-wrap{
+    width: 200%;
+    display: flex;
 }
 .talent {
     position: relative;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 3rem;
@@ -48,7 +66,9 @@
     font-size: 2rem;
     font-family: 'Itim', cursive;
 }
-
+.next {
+    transform: translateX(-50%);
+}
 @media screen and (max-width: 1201px) {
 }
 @media screen and (max-width: 1024px) {

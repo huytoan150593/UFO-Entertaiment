@@ -37,6 +37,7 @@
     width: 200px;
     height: auto;
     padding: 20px 0;
+    cursor: pointer;
 }
 .logo img {
     width: 100%;

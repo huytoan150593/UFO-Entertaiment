@@ -1,27 +1,36 @@
 import React from "react";
 import "./CreateTeam.css";
+import { talents } from "../../constains/talent";
 
 const CreateTeam = () => {
-  return (
-    <div id="create-team">
-      <div className="talent">
-        <div className="talent-image">
-          <img src="/assets/talent/hao-sq.jpg" alt="" />
+    const handlePrev = () => {};
+    const handleNext = () => {
+        const element = document.querySelector(".talen-wrap");
+        element.classList.add("next");
+    };
+    return (
+        <div id="create-team">
+            <div className="create-team-navi">
+                <button onClick={handlePrev}> &#8656; </button>
+                <button onClick={handleNext}> &#8658; </button>
+            </div>
+            <div className="talen-wrap">
+                {talents.map((talent, index) => (
+                    <div key={index} className="talent">
+                        <div className="talent-image">
+                            <img src="/assets/talent/hao-sq.jpg" alt="" />
+                        </div>
+                        <div className="talent-info">
+                            <h1>{talent.name}</h1>
+                            <p>{talent.birthday}</p>
+                            <p> {talent.position}</p>
+                            <p>{talent.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
-        <div className="talent-info">
-          <h1>Hoàng Gia Hào</h1>
-          <p>Birthday: 17/05/1996</p>
-          <p>Position: Creater</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            nihil, reiciendis minima, beatae aspernatur dolores vero ipsum
-            tenetur dolor natus sit eum voluptate aliquid. Cupiditate illum eum
-            rerum tempore cumque.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default CreateTeam;
