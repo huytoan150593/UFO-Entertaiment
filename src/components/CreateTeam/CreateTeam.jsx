@@ -3,10 +3,15 @@ import "./CreateTeam.css";
 import { talents } from "../../constains/talent";
 
 const CreateTeam = () => {
-    const handlePrev = () => {};
+    const handlePrev = () => {
+        const element = document.querySelector(".talen-wrap");
+        element.classList.add("prev");
+        element.classList.remove("next");
+    };
     const handleNext = () => {
         const element = document.querySelector(".talen-wrap");
         element.classList.add("next");
+        element.classList.remove("prev");
     };
     return (
         <div id="create-team">
